@@ -23,7 +23,7 @@
 @import url("icons.css");
 
 /*variables*/
-@media (-moz-bool-pref: "uc.tweak.floating-tabs") {
+@media -moz-pref("uc.tweak.floating-tabs") {
 
   :root:not([lwtheme]),
   :root[privatebrowsingmode="temporary"]:where([style*="--lwt-accent-color: rgb(28, 27, 34)"]:not([style*="--newtab-background-color-secondary: rgb(66, 65, 77)"])) {
@@ -34,7 +34,7 @@
 :root {
   --af-minimal-opacity: 0.53 ;
   --af-normal-opacity: 0.15 !important;
-  @media (-moz-bool-pref:"af.edgyarc.macos-more-translucent") {
+  @media -moz-pref("af.edgyarc.macos-more-translucent") {
       --af-minimal-opacity: 0.45 !important;
   --af-normal-opacity: 0.05 !important;
   }
@@ -57,12 +57,12 @@
     0px 0px 18px 4px light-dark(rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.40));
 
   /* Make corners more rounded */
-  @media (-moz-bool-pref: "uc.tweak.rounded-corners") {
+  @media -moz-pref("uc.tweak.rounded-corners") {
     --uc-tweak-rounded-corners-padding: 8px !important;
     --uc-tweak-rounded-corners-radius: 7px !important;
   }
   /*full opacity when translucency is disabled*/
-  @media not (-moz-bool-pref:"af.edgyarc.macos-translucent") {
+  @media not -moz-pref("af.edgyarc.macos-translucent") {
     --af-minimal-opacity: 1 !important;
   }
 }
@@ -117,18 +117,18 @@
 #sidebar-header {
    & * {
     font-size:0.94em !important; }
-   @media (-moz-bool-pref:"af.edgyarc.bottom-sidebar-header"){  
+   @media -moz-pref("af.edgyarc.bottom-sidebar-header"){  
       order:4 !important;
-          @media not (-moz-bool-pref:"af.edgyarc.edge-sidebar") {
+          @media not -moz-pref("af.edgyarc.edge-sidebar") {
       #sidebar-switcher-target {
          margin-bottom:10px !important;
       }
      }
-     @media  (-moz-bool-pref:"af.edgyarc.edge-sidebar") {
+     @media  -moz-pref("af.edgyarc.edge-sidebar") {
 
      }
    }
-  @media not (-moz-bool-pref:"af.edgyarc.show-sidebar-header") {
+  @media not -moz-pref("af.edgyarc.show-sidebar-header") {
     visibility: collapse !important; /*hide sidebar by default*/
   }
   
@@ -147,27 +147,27 @@
 }
 
 /*Start basic sidebar*/
-@media (-moz-bool-pref:"af.edgyarc.edge-sidebar") { 
+@media -moz-pref("af.edgyarc.edge-sidebar") { 
 
   #sidebar-box {
     border: var(--af-content-border) !important;
     box-shadow: var(--af-content-shadow) !important;
     border-radius: 6px !important;
     padding:0px !important;
-    @media (-moz-bool-pref:"af.edgyarc.macos-translucent") {
+    @media -moz-pref("af.edgyarc.macos-translucent") {
      
       opacity: 0.6 !important;
-       @media (-moz-bool-pref:"af.edgyarc.macos-more-translucent" ) {
+       @media -moz-pref("af.edgyarc.macos-more-translucent" ) {
          opacity:0.5 !important;
       }
     }
   }
-     @media not (-moz-bool-pref:"af.edgyarc.show-sidebar-header")   {    
+     @media not -moz-pref("af.edgyarc.show-sidebar-header")   {    
        #sidebar {
       border-radius: 6px 6px 6px 6px !important; 
     }
     }
-      @media (-moz-bool-pref:"af.edgyarc.show-sidebar-header")   {   
+      @media -moz-pref("af.edgyarc.show-sidebar-header")   {   
         :root:not([titlepreface="᠎"]) #sidebar {
       border-radius: 0px 0px 6px 6px !important; 
     }   
@@ -199,7 +199,7 @@
     transition: var(--af-bg-transition) !important;
   }
   
-  @media not (-moz-bool-pref:"af.edgyarc.macos-translucent") {
+  @media not -moz-pref("af.edgyarc.macos-translucent") {
   #main-window::after, #browser::before {
     content: '';
     display: block;

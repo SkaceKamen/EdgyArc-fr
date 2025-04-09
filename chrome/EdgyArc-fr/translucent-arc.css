@@ -1,6 +1,6 @@
 /*start minimal sidebar*/
 
-@media not (-moz-bool-pref:"af.edgyarc.edge-sidebar"){
+@media not -moz-pref("af.edgyarc.edge-sidebar"){
   
   
     #sidebar-box {
