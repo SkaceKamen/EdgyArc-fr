@@ -123,7 +123,7 @@
       /* Window controls on the right. */
       @media not (-moz-gtk-csd-reversed-placement) {
         padding-inline-end: 0px;
-        margin-inline-end: calc(50px + var(--uc-titlebar-drag-space)) !important;
+        margin-inline-end: calc(70px + var(--uc-titlebar-drag-space)) !important;
 
         /* Remove the padding from the side of the navbar */
         & #PanelUI-menu-button {
